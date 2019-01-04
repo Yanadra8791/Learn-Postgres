@@ -26,3 +26,21 @@ AND replacement_cost BETWEEN 5 AND 15;
 SELECT count(*) FROM film
 WHERE title LIKE '%Truman%';
 */
+									
+/*
+SELECT staff_id, count(amount), sum(amount) FROM payment
+GROUP BY staff_id
+ORDER BY sum(amount) DESC;
+*/
+
+/*
+SELECT rating, avg(replacement_cost) FROM film
+GROUP BY rating;
+*/
+
+/*
+SELECT customer_id, sum(amount) FROM payment
+GROUP BY customer_id
+ORDER BY sum(amount) DESC
+LIMIT 5;
+*/									
