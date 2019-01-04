@@ -43,4 +43,19 @@ SELECT customer_id, sum(amount) FROM payment
 GROUP BY customer_id
 ORDER BY sum(amount) DESC
 LIMIT 5;
-*/									
+*/		
+									
+/*
+SELECT customer_id, count(amount) 
+FROM payment
+GROUP BY customer_id
+HAVING count(amount)>=40
+ORDER BY count(amount) ASC;
+*/
+
+/*
+SELECT rating, avg(rental_duration) 
+FROM film
+GROUP BY rating
+HAVING avg(rental_duration)>5
+*/
