@@ -59,3 +59,26 @@ FROM film
 GROUP BY rating
 HAVING avg(rental_duration)>5
 */
+									
+/*
+SELECT  customer_id, sum(amount)
+FROM payment
+WHERE staff_id = 2
+GROUP BY customer_id
+HAVING sum(amount)> 110;
+*/
+
+/*
+SELECT count(title) FROM film
+WHERE title LIKE 'J%';
+*/
+
+/*
+SELECT max(customer_id), first_name, last_name FROM customer
+WHERE first_name LIKE 'E%'
+AND  address_id <500
+GROUP BY first_name, last_name
+ORDER BY AVG(customer_id) DESC
+LIMIT 1;
+*/
+
