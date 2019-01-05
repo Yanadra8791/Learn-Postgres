@@ -82,3 +82,49 @@ ORDER BY AVG(customer_id) DESC
 LIMIT 1;
 */
 
+
+/*
+SELECT a.customer_id,
+	   a.first_name,
+	   a.last_name,
+	   a.email,
+	   b.amount,
+	   b.payment_date
+FROM customer AS a
+INNER JOIN payment AS b
+ON b.customer_id = a.customer_id
+WHERE a.customer_id = 2
+ORDER BY a.customer_id
+*/
+
+/*
+SELECT a.payment_id,
+	   a.amount,
+	   b.first_name,
+	   b.last_name	   
+FROM payment AS a
+INNER JOIN staff AS b
+ON a.staff_id = b.staff_id;
+*/
+
+/*
+SELECT a.store_id, b.title, count(b.title) FROM inventory AS a 
+INNER JOIN film AS b 
+ON a.film_id=b.film_id
+GROUP BY b.title, a.store_id
+ORDER BY a.store_id, b.title;
+*/
+
+/*  Model pentru extragerea timpului dintr-o coloana de tip timestamp
+SELECT sum(amount) AS total, EXTRACT(MONTH FROM payment_date) AS MONTH 
+FROM payment
+GROUP BY MONTH
+ORDER BY total DESC
+LIMIT 1;
+*/
+
+/*
+SELECT first_name || ' '||last_name AS name   
+FROM customer;
+*/
+
