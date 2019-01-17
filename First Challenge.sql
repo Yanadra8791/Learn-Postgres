@@ -82,6 +82,7 @@ ORDER BY AVG(customer_id) DESC
 LIMIT 1;
 */
 
+
 /*
 SELECT a.customer_id,
 	   a.first_name,
@@ -126,6 +127,8 @@ LIMIT 1;
 SELECT first_name || ' '||last_name AS name   
 FROM customer;
 */
+ 
+
 									
 /*
 SELECT title ,rental_rate 
