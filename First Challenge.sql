@@ -127,4 +127,22 @@ LIMIT 1;
 SELECT first_name || ' '||last_name AS name   
 FROM customer;
 */
+ 
 
+									
+/*
+SELECT title ,rental_rate 
+FROM film
+WHERE rental_rate > (SELECT avg(rental_rate)FROM film)
+ORDER BY title;
+*/
+
+/*
+SELECT film_id, title 
+FROM film
+ WHERE film_id IN (
+ SELECT b.film_id
+ FROM rental AS a
+ INNER JOIN inventory AS b ON b.inventory_id=a.inventory_id
+ WHERE a.rental_date BETWEEN '2005-05-29' AND '2005-05-30');
+*/
